@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhiraj Javare - Developer & Trader</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      header p {
+        font-size: 1.3em;
+        opacity: 0.9;
+      }
+
+      nav {
+        background: white;
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #2a5298;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      section {
+        background: white;
+        margin-bottom: 40px;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+        color: #1e3c72;
+        border-bottom: 3px solid #2a5298;
+        padding-bottom: 10px;
+      }
+
+      .about-content {
+        font-size: 1.1em;
+        line-height: 1.8;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .skill-card {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+        border-left: 4px solid #2a5298;
+      }
+
+      .skill-card h3 {
+        color: #1e3c72;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+      }
+
+      .skill-card ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .skill-card li {
+        padding: 8px 0;
+        color: #555;
+      }
+
+      .skill-card li:before {
+        content: "▹ ";
+        color: #2a5298;
+        font-weight: bold;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .project-card {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .project-card h3 {
+        color: #1e3c72;
+        margin-bottom: 15px;
+        font-size: 1.4em;
+      }
+
+      .project-card p {
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .project-card .tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .tech-tag {
+        background: #2a5298;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 0.85em;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.1em;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .contact-item a {
+        color: #2a5298;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-item a:hover {
+        color: #1e3c72;
+      }
+
+      footer {
+        background: #1e3c72;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+
+        header p {
+          font-size: 1.1em;
+        }
+
+        section {
+          padding: 30px 20px;
+        }
+
+        nav ul {
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dhiraj Javare.</h1>
+      <p>Developer & Trader | Web • Android • Crypto • Forex</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>
+            I'm a full-stack developer and active trader specializing in crypto
+            and forex markets. With a strong foundation in web and Android
+            development, I build robust applications while actively trading and
+            analyzing financial markets.
+          </p>
+          <p>
+            My unique combination of technical expertise and market knowledge
+            allows me to create innovative solutions at the intersection of
+            technology and finance.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills & Expertise</h2>
+        <div class="skills">
+          <div class="skill-card">
+            <h3>Development</h3>
+            <ul>
+              <li>Web Applications (HTML, CSS, JavaScript)</li>
+              <li>Android Development</li>
+              <li>Full-Stack Development</li>
+              <li>API Integration</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Trading</h3>
+            <ul>
+              <li>Cryptocurrency Trading</li>
+              <li>Forex Markets</li>
+              <li>Technical Analysis</li>
+              <li>Risk Management</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Tools & Technologies</h3>
+            <ul>
+              <li>React, Node.js</li>
+              <li>Android Studio</li>
+              <li>Git & Version Control</li>
+              <li>Trading Platforms & APIs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+          <div class="project-card">
+            <h3>Crypto Portfolio Tracker</h3>
+            <p>
+              A web application for tracking cryptocurrency investments with
+              real-time price updates and portfolio analytics.
+            </p>
+            <div class="tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">Charts</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Trading Signal Android App</h3>
+            <p>
+              Mobile application providing technical analysis signals for forex
+              and crypto markets with customizable alerts.
+            </p>
+            <div class="tech">
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Market Analysis Dashboard</h3>
+            <p>
+              Real-time dashboard for monitoring multiple markets with technical
+              indicators and price alerts.
+            </p>
+            <div class="tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">WebSocket</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span>📧</span>
+            <a href="mailto:dhiraj.javare@gmail.com">your.email@example.com</a>
+          </div>
+          <div class="contact-item">
+            <span>🐦</span>
+            <a href="https://x.com/DhirajJavare" target="_blank"
+              >@Dhirajjavare</a
+            >
+          </div>
+          <div class="contact-item">
+            <span>💼</span>
+            <a href="https://github.com/Dhirajjaware" target="_blank">GitHub</a>
+          </div>
+          <div class="contact-item">
+            <span>💻</span>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Dhiraj javare. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll("nav a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        });
+      });
+
+      // Add fade-in animation on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      });
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "opacity 0.6s, transform 0.6s";
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
